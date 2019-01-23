@@ -56,3 +56,28 @@ A: sklearn.cluster.Birch(threshold=0.1)
 D: sklearn.cluster.Birch()  
 D: sklearn.cluster.BIRCH(threshold=0.1, branching_factor=50)  
 D: sklearn.cluster.BIRCH(branching_factor=50)  
+
+
+# DBSCAN
+Understand  
+Given two points A and B, which of the following statement suggests that they are densely connected with each other in terms of DBSCAN?  
+A: Both A and B are densely reachable from some core point  
+D: A is at a distance of epsilon or less from B  
+D: B is at a distance of epsilon or less from A  
+D: More threshold number of points between A and B  
+
+Apply  
+You have a data-set with 62 dimensions and 10,000 datapoints. In general, what are the minimum number of samples required to build a DBSCAN model for this data-set?  
+A: Greater than or equal to 63  
+D: Less than 63  
+D: Greater than or equal to 62  
+D: Less than 62  
+
+Analyze  
+
+
+
+
+
+
+
