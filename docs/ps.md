@@ -1,4 +1,4 @@
-Consider a CSV file named pandas\_read.csv having 11 columns and 1000 rows along with a footer. The table below a glimpse of data from the CSV file.
+Consider a CSV file named `pandas_read.csv` having 11 columns and nearly 1000 rows along with a footer. The table below shows a glimpse of data from the CSV file.
 
 **First 6 rows with the header**
 
