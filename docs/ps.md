@@ -1,29 +1,5 @@
 Consider a CSV file named `pandas_read.csv` having 11 columns and nearly 1000 rows along with a footer. The table below shows a glimpse of data from the CSV file.
 
-**First 6 rows with the header**
-
-| **ID1** | **Id2** | **Id2** | **ID3** | **Age** | **kg** | **kg** | **cm** | **DOB** | **Study** | **Grade** |
-| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| ? | ? | ? | ? | ? | ? | ? | ? | ? | ? | ? |
-| ? | ? | ? | ? | ? | ? | ? | ? | ? | ? | ? |
-| ? | ? | ? | ? | ? | ? | ? | ? | ? | ? | ? |
-| 2748 | 1847 | 1847 | 2898 | 48 | 80 | 80 | 151 | 11/13/1990 | Ph.D. | A- |
-| 1171 | 2077 | 2077 | 4124 | 51 | 57 | 57 | 165 | 8/4/1988 | Doctorate | F- |
-| 1732 | 3784 | 3784 | 1402 | 50 | 101 | 101 | 194 | 11/11/1989 | Doctorate | D- |
-
-
-**Last 6 rows including the footer**
-
-| **ID1** | **Id2** | **Id2** | **ID3** | **Age** | **kg** | **kg** | **cm** | **DOB** | **Study** | **Grade** |
-| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| 4839 | 2027 | 2027 | 3023 | 41 | 85 | 85 | 191 | 2/5/1991 | Doctorate | A+ |
-| 3233 | 1947 | 1947 | 4584 | 41 | 50 | 50 | 151 | 9/23/1996 | Doctorate | B+ |
-| 4719 | 646 | 646 | 4414 | 43 | 103 | 103 | 150 | 12/3/1985 | Master | F+ |
-| The data in the CSV file lists three IDs of 1000 unique person with several other attributes like their Age, Weight, Height, Date of Birth, last completed study and corresponding study grade.  |   |   |   |   |   |   |   |   |   |
-|   |   |   |   |   |   |   |   |   |   |   |
-|   |   |   |   |   |   |   |   |   |   |   |
-
-
 To initiate the process, first import the pandas library and assign an alias name to it. The commonly referred alias to pandas library is pd.
 
 `import pandas as pd`
