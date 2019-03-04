@@ -1,10 +1,10 @@
-Consider a CSV file named `pandas_read.csv` having 11 columns and nearly 1000 rows along with a footer. The table below shows a glimpse of data from the CSV file.
+In this guide, you'll learn about Pandas I/O tools using CSV reader and writer. Consider a CSV file named `pandas_read.csv` having 11 columns and nearly 1000 rows along with a footer.
 
-To initiate the process, first import the pandas library and assign an alias name to it. The commonly referred alias to pandas library is pd.
+To initiate the I/O process, first import the pandas library and assign an alias name to it. The commonly referred alias to pandas library is pd.
 
 `import pandas as pd`
 
-Next, let us take a glimpse of the CSV file if we read it without specifying any explicit arguments. We are appending our reading operation with `.head(4)` method to retrieve first 4 rows.
+Next, let us take a glimpse of the CSV file by reading it without specifying any explicit arguments. We are appending `.head(4)` method to the reading operation to retrieve first 4 rows.
 
 `pd.read_csv('pandas_read.csv').head(4)`
 
@@ -15,7 +15,7 @@ Next, let us take a glimpse of the CSV file if we read it without specifying any
 | 2 | ? | ? | ? | ? | ? | ? | ? | ? | ? | ? | ? |
 | 3 | 2748 | 1847 | 1847 | 2898 | 48 | 80 | 80 | 151 | 11/13/1990 | Ph.D. | A- |
 
-Notice the problems which occur when we read the file directly –
+Notice few challenges which occur when we read the file directly –
 
 1. There are two columns `Id2.1` and `kg.1` which are duplicates of `Id2` and `kg` columns. Hence, these two columns need to be dropped and only unique columns need to be read.
 2. First three rows consist of garbage data and hence need to be removed.
@@ -35,7 +35,7 @@ Let us begin by dropping the duplicate columns. The duplicate columns (`Id2.1` a
 
 
 
-Next, let us remove the first three garbage rows. This can be achieved by mentioning the row numbers in the `skiprows` argument. Do remember that index in `skiprows` starts with 1 not 0. So, here we will be skipping 1, 2, and 3 rows.
+Next, let us remove the first three garbage rows. This can be achieved by mentioning the row numbers in the `skiprows` argument. Do remember that index in `skiprows` starts with 1 not 0. So, here we will be skipping 1st, 2nd, and 3rd rows.
 
 `pd.read_csv('pandas_read.csv', usecols=[0, 1, 3, 4, 5, 7, 8, 9, 10], skiprows=[1, 2, 3]).head(4)`
 
@@ -72,17 +72,17 @@ As you may observe, only cell `ID1 997` holds the footer and rest of the cells i
 
 As we can observe, rows 997-999 have been removed leaving the last row as 996.
 
-Next, let us find the datatype for DOB column using Pandas `dtypes` attribute.
+Next, let us find the datatype for `DOB` column using Pandas `dtypes` attribute.
 
 `pd.read_csv('pandas_read.csv', usecols=[0, 1, 3, 4, 5, 7, 8, 9, 10], skiprows=[1, 2, 3], skipfooter=3, engine='python').DOB.dtypes`
 
-This results to `dtype('O')` which means `DOB` column has an object datatype in spite of a datetime datatype. To convert this column to a datetime column, we need to mention a datetime parser along with the format of date. The `DOB` column has a date format given as `MM/DD/YYYY`, therefore we need to parse each row data. This can be accomplished by mentioning the column inside `parse_dates` argument followed by date parser function. The function can be implemented using `lambda` and pandas `datetime.strptime` methods.
+This results to an object (`dtype('O')`) datatype. To convert this column to a datetime column, we need to mention a datetime parser along with the format of date (`MM/DD/YYYY`). This can be accomplished by mentioning the column inside `parse_dates` argument followed by date parser function. The function can be implemented using `lambda` and pandas `datetime.strptime` methods.
 
 `dateparse = lambda x: pd.datetime.strptime(x, '%m/%d/%Y')`
 
 `pd.read_csv('pandas_read.csv', usecols=[0, 1, 3, 4, 5, 7, 8, 9, 10], skiprows=[1, 2, 3], skipfooter=3, engine='python', parse_dates=['DOB'], date_parser=dateparse).DOB.dtypes`
 
-This results into `dtype('<M8[ns]')` which is a Pandas datetime format.
+This results into Pandas datetime (`dtype('<M8[ns]')`) format.
 
 By following these steps, we have overcome the before-mentioned problems and now we can write back these changes to a new CSV file named `pandas_write.csv`.
 
