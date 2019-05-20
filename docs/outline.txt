@@ -1,0 +1,325 @@
+Outline
+
+
+=============================================
+* Scenario based + Individual module learning
+=============================================
+
+======================
+* Modules distribution
+======================
+
+Module 1: Getting started with deep learning
+			- Talks about NN and its fundamentals
+Module 2: Identifying a movie character
+			- Talks about ANN
+Module 3: Finding a similar fashion apparel
+			- Talks about CNN
+Module 4: Forecasting market stocks 
+			- Talks about RNN
+Module 5: Removing watermarks from images
+			- Talks about Auto-Encoders
+
+Module 6: Transfer learning
+			- Transfer Learning in for Image related problems, Transfer Learning in language models
+
+Module 7: Additional learning
+			- Capsule networks, and Generative Adversarial Networks
+
+
+			
+===============================================
+* Module 1: Getting started with deep learning			
+===============================================
+
+Resource 1. Why should I use deep learning?
+			- Advantages of Deep Learning (Also discuss when to use DL) | Specify DL is a type of ML. Contrast with traditional ML algo's if required based on use case/case-study 
+			- Applications in current world (FB face identifier, Google Translate, Object detection challenges like ILSVRC)
+				> Bring in applications in the business world. Highlight what kind of application DL is used for in businesses
+			- Google trends, arxiv and other related stuff	
+			- Quiz 
+
+Resource 2. What is deep learning?
+			- Definition 
+			  > build intution to DL by making the learner imagine/experience dl and then get into a formal definition
+---------------------------------------April 25th--------------------------------------------------------------------------
+Resource 3: Overview of a neural network model
+			- Lets recap neural networks which is a fundamental part of DL
+				- Start with an example 
+				- a single neuron as a linear combination of inputs
+				- Visualize the output of the single neuron and highlight that one neuron is not enough
+
+				- add a second (and then few more) neurons in the same layer
+				- visualize the output now.. the model will be slightly better, but its still mix of linear combinations
+
+
+				- introduce non-linearity (this is what an activation function is)
+				- add more layers as required and visualize the example...
+
+				- discuss how the weights for the linear combination are set
+
+				- forward propogation to give you the outcome and then talk about error
+
+				- backpropogation to adjust the weights..
+			
+			> BP Try-out, where we provide them code but ask them to feed some random input and observe how weights are updated. 
+			        --P.S. This can be done interactively using Matplotlib.
+			- Exercises
+			- Quiz
+-------------------------------------------------- 13th May--------------------------------------------------------------------------
+
+Resource 4. how backpropogation works
+			- Optimization algorithms
+				> With BP, we had introduced Gradient Descent (GD), now we showcase the problems associated with GD and explain following algorithms to overcome them:
+					* Gradient based: SGD, Mini-batch, Momentum, NAG
+					* Adaptive learning rate: Adagrad, Adadelta, RMSprop, Adam
+				> Quiz
+
+-------------------------------------------------- 17th May--------------------------------------------------------------------------
+			- Activation functions
+				> Advantages and challenges faced by the following activation functions:
+					* Sigmoid
+					* Tanh
+					* ReLU
+				> Quiz
+
+Resource 5: What are the variants of a neural networks?
+				> Brief about variants (ANN, CNN, RNN, and Auto-Encoders) with a real-world application.			
+
+
+
+-------------------------------------------------- 22nd May-----------------------------------------------------------
+Module 2: Identifying a movie character
+
+========================================
+
+
+Resource 1: Describing the scenario
+ 
+				> Brief about the scenario, and dataset -- covers classification
+
+
+Resource 2: Transforming the scenario to an ANN problem
+	
+				> Discuss what is ANN and how it builds upon NN
+			
+				> Code: Loading the dataset, splitting into train-test, and encoding to make it ready for model building.
+
+
+Resource 3: Building ANN model
+			
+				> Build and predict with no tuning
+
+----------------------------------------------------------- 27th May May--------------------------------------------------------------------------
+Resource 4: Tuning the model
+			
+				> Code: Comparing Optimization algorithms
+			
+				> Code: Comparing Activation functions
+			
+				> Code: Handling learning rate
+			
+				> Code: Handling weights and biases
+			
+				> Code: Dropout regularization
+			
+				> Code: L0, L1, and L2 regularizations
+			
+				> Code: Final model with tuned parameters and hyperparameters
+
+
+Resource 5: Try-Out: Predicting the house price -- covers regression
+			
+				> Provide house dataset and brief about the data
+		
+				> Build ANN model on the top of dataset
+			
+				> Tune the model
+
+
+Resource 6: Exercises
+			
+				> 1. Identifying a fruit (classification, https://www.kaggle.com/moltean/fruits)
+		
+				> 2. Predict the doctor's consultation fee (regression, https://www.kaggle.com/nitin194/doctor-fees-prediction#Final_Train.xlsx)
+
+
+Resource 7: Quiz
+
+
+----------------------------------------------------------3rd June----------------------------------------------------------------
+Module 3: Finding a similar fashion apparel
+
+=============================================
+
+
+
+Resource 1: Describing the scenario
+			
+				> Brief about the scenario, and dataset (taken from Amazon)
+
+
+Resource 2: Exercise
+			
+				> Implement ANN on the problem
+
+
+Resource 3: Introducing CNN
+			
+				> Describing CNN through a small image dataset theoretically and how it improves over ANN
+			
+				> Explaining each layer with their components (Depth, Stride and Zero-padding)			
+
+
+Resource 4: Quiz on CNN layer (numerical)
+
+-------------------------------------- 7th June---------------------------------------------------------------------------------
+Resource 5: Building CNN model to find similar fashion apparel
+			
+				> Code: Loading and splitting data
+	
+				> Code: Building model with random hyperparameters
+			
+				> Code: Finding similar apparel
+
+
+Resource 6: Tuning hyperparameters
+			
+				> Code: Optimal stride, depth and zero-padding
+
+
+Resource 7: Exercise
+			
+				> Perform tuning of parameters which is done in ANN resource 4
+
+
+
+
+
+Resource 10: Try-Out: Identifying a similar face
+			
+
+				> Use face data (http://vis-www.cs.umass.edu/lfw/) and implement CNN			
+
+
+Resource 11: Exercises
+			
+				> Identify a similar image (http://image-net.org/download-images)			
+
+
+Resource 12: Quiz
+
+
+--------------------------------------12th June--------------------------------------------------------------------------
+
+=============================================
+* 
+Module 4: Forecasting stocks 
+
+=============================================
+
+
+
+Resource 1: Describing the scenario
+			
+				> Brief about the scenario (time series data), and dataset (INFY stocks)
+
+
+Resource 2: Introducing RNN
+			
+				> Explaining RNN with a small data
+			
+				> Explaining LSTM and GRU
+
+
+Resource 3: Quiz			
+
+
+--------------------------------------------------20th June----------------------------------------------------------------
+
+Resource 4: Forecasting stocks using LSTM
+			
+				> Code: Implementation + tuning of number of layers
+
+
+Resource 5: Forecasting stocks using GRU
+			
+				> Code: Implementation + tuning of number of layers			
+
+
+Resource 6: Try-Out: Predicting next word
+			
+				> Use a story data from gutenberg and build a LSTM model on it
+
+
+--------------------------------------------------17th June-------------------------------------------------------------------
+
+Resource 7: Exercise
+	
+				> Forecast INTEL stocks
+			
+				> Predicting story data (new dataset from gutenberg)			
+
+
+Resource 8: Quiz
+
+
+
+
+=============================================
+* 
+Module 5: Removing watermark from the images
+
+=============================================
+
+
+
+Resource 1: Describing the scenario
+			
+				> Brief about scenario and data (CIFAR10)
+			
+				> Code: Add watermark on the images
+
+Resource 2: Introducing Auto-Encoders
+			
+				> Explaining unsupervised DL through Auto-Encoders
+
+------------------------------------21st June----------------------------------------------------------
+Resource 3: Building an Auto-Encoder model
+			
+				> Code: Building the encoding and removing the watermark
+
+
+Resource 4: Try-Out: Data compression
+			
+				> Use MNIST data and implement auto-encoder to compress the images and compare the results with original
+
+
+Resource 5: Exercise
+			
+				> Remove watermark and noise from MNIST dataset (also create the watermark for the images)
+]
+
+Resource 6: Quiz
+
+
+
+-------------------------------------25th June---------------------------------------------------------
+====================================================
+Module 6: Transfer Learning
+====================================================
+
+Resource 1: Using pre-built model parameters
+			
+				> Implement VGG on the scenario
+
+
+Resource 2: Exercise
+			
+				> Implement Alexnet on the scenario
+---------------------------------------------28th June-----------------------------------------------------------
+====================================================
+Module 7: Additional Learning
+====================================================
+
+-----------------------------------------------------------First Week of July.----------------------------------------------------------------
