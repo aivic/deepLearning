@@ -53,7 +53,7 @@ Once you get the data in a tablular form, now you can follow the given hierarchy
 
 >> Menu bar > Insert > PivotTable > Press OK
 
-![Imgur](https://i.imgur.com/1xakDeD.png)
+![Imgur](https://i.imgur.com/BViX08g.png)
 
 This opens a new blank worksheet, however, you can observe `PivotTable Fields` on the right side of the sheet. This box by default has two areas, first, you have `Field Section` and second, stacked `Areas Section`. The `Field Section` consists of all the column names and the `Areas Section` has four sub-sections, Filters, Columns, Rows and Values. You drag a column name from the `Field Section` and drop  it to any of the `Areas Section`.
 
