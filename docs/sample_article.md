@@ -224,3 +224,71 @@ The PivotTable given below shows the data only for quarters 1 and 2 in 2018:
 | 2           |                      2233 |                   4221 |
 | 2018 Total  |                      6588 |                 4399.5 |
 | Grand Total |                      6588 |                 4399.5 |
+
+### Layout Transformation
+In the above PivotTables, you may have observed that there is no separate boundary to distinguish a group from another (here, 2018 data from 2019 data). Plus, the year and quarter appears in a single column. PivotTables provide an option under the Design tab named as `Report Layout` and `Blank Rows` to tackle these issues. Let us learn them step by step:
+
+#### Adding and Removing Blank Rows in a PivotTable
+Consider a PivotTable with two groups as shown below:
+
+| Row Labels  | Sum of Nikodale Furniture | Sum of Samuel Arts |
+|-------------|---------------------------|--------------------|
+| **2018**        |                           |                    |
+| 1           |                      6588 |               4578 |
+| 2           |                      2233 |               4221 |
+| 3           |                      6630 |               6584 |
+| 4           |                      1855 |               1452 |
+| **2019**        |                           |                    |
+| 1           |                      4548 |               2500 |
+| 2           |                      7548 |               3888 |
+| 3           |                      2154 |               5699 |
+| 4           |                      8875 |               8875 |
+| Grand Total |                     40431 |              37797 |
+
+You can notice that we can improve the visual of this table by adding a blank row below 2019 year row. To achieve this, follow the given steps:
+
+>> Menu bar > Design > Blank Rows > Insert Blank Line After Each Item
+
+This above operation results in the following PivotTable:
+
+| Row Labels  | Sum of Nikodale Furniture | Sum of Samuel Arts |
+|-------------|---------------------------|--------------------|
+| **2018**        |                           |                    |
+| 1           |                      6588 |               4578 |
+| 2           |                      2233 |               4221 |
+| 3           |                      6630 |               6584 |
+| 4           |                      1855 |               1452 |
+|  |  |  |
+| **2019**        |                           |                    |
+| 1           |                      4548 |               2500 |
+| 2           |                      7548 |               3888 |
+| 3           |                      2154 |               5699 |
+| 4           |                      8875 |               8875 |
+| Grand Total |                     40431 |              37797 |
+
+To remove the blank row, follow the given steps:
+
+>> Menu bar > Design > Blank Rows > Remove Blank Line After Each Item
+
+#### Changing Table Layout
+The `Report Layout` option under the Design tab has the following options:
+
+![Imgur](https://i.imgur.com/7VegCEJ.png)
+
+By default, the PivotTable comes with the first option `Show in Compact Form`. Let us use another format `Show in Outline Form` to separate Year from Quarter which results in the following PivotTable:
+
+|    Year     | Quarter | Sum of Nikodale Furniture | Sum of Samuel Arts |
+|-------------|---------|---------------------------|--------------------|
+| 2018        |         |                     17306 |              16835 |
+|             |       1 |                      6588 |               4578 |
+|             |       2 |                      2233 |               4221 |
+|             |       3 |                      6630 |               6584 |
+|             |       4 |                      1855 |               1452 |
+| 2019        |         |                     23125 |              20962 |
+|             |       1 |                      4548 |               2500 |
+|             |       2 |                      7548 |               3888 |
+|             |       3 |                      2154 |               5699 |
+|             |       4 |                      8875 |               8875 |
+| Grand Total |         |                     40431 |              37797 |
+
+Now, you can test rest of the options and observe the difference in the table.
