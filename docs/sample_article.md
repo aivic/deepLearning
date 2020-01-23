@@ -205,3 +205,22 @@ Perform similar operation with Samuel Arts but this time select `Average`. Once 
 | 4           |                      8875 |                   8875 |
 | **2019 Total**  |                      8875 |                 5240.5 |
 | Grand Total |                      8875 |               4724.625 |
+
+### Filtering
+Just like we can apply filter on a usual table in Excel, we can also apply similar filter on a PivotTable. For instance, consider the table above, if you click on any year's quarter cell (1, 2, 3, or 4) and then click on the drop down button next to **Row Labels** column, you'll find an option to select all or specific quarters. Similarly, if you click on a cell with year value (2018 or 2019), the drop down values changes from quarter to year. The images given below represent the drop down box in each case:
+
+![Imgur](https://i.imgur.com/rwDwaGo.png)
+
+![Imgur](https://i.imgur.com/27Gzfwn.png)
+
+Instead of clicking on a cell to select a field (Quarter or Year), you can also choose them right from the `Select Field` option available in the drop down box.
+
+The PivotTable given below shows the data only for quarters 1 and 2 in 2018:
+
+| Row Labels  | Max of Nikodale Furniture | Average of Samuel Arts |
+|-------------|---------------------------|------------------------|
+| 2018        |                           |                        |
+| 1           |                      6588 |                   4578 |
+| 2           |                      2233 |                   4221 |
+| 2018 Total  |                      6588 |                 4399.5 |
+| Grand Total |                      6588 |                 4399.5 |
