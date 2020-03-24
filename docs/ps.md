@@ -7,7 +7,7 @@ In this guide, we will learn to search and manipulate the data in Excel. We cove
 - Combining Data Using the Concatenate Function
 - Filling and Pasting Data into Cells
 - Filling Cells in Excel Using AutoFill
-- Paste Options in Excel
+- Find and Replace
 
 ## Changing the Text Case in Excel
 You may get text in your spreadsheet in any format. To change the text case in Excel, let us first consider these records:
@@ -106,6 +106,29 @@ First, the records with label F (Female), followed by I (Infant) and lastly M (M
 | F      |   0.55 |  0.44 |   0.15 | 0.8945 |  0.3145 |   0.151 |  0.32 |    19 |
 
 ## Combining Data Using the Concatenate Function
+Suppose you have a data set as given below:
+
+| First |   Last    | Degree |
+|-------|-----------|--------|
+| Alice | Johnson   | MD     |
+| Peter | Rottingum | MBBS   |
+| James | Teal      | PhD    |
+
+And you need to arrive at the given result in a new column:
+
+| Complete |
+| --- |
+| Alice Johnson, MD |
+| Peter Rottingum, MBBS |
+| James Teal, PhD |
+
+What will you do to achieve this task? 
+
+You may think of manually copying the values from a cell and pasting it into the final one, not to mention the need of proper spacing and a comma right after the last name. To make this process easy, Excel has a function `**CONCATENATE**`. You can use this function and complete this task in less than a minute. The syntax goes like this:
+
+`=CONCATENATE(A2, " ", B2, ", ", C2)`
+
+A proper spacing, a comma and the cell names. This results in the final column as expected.
 
 
 
