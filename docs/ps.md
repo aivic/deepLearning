@@ -5,8 +5,7 @@ In this guide, we will learn to search and manipulate the data in Excel. We cove
 - Changing the Text Case in Excel
 - Sorting and Filtering Data in Excel
 - Combining Data Using the Concatenate Function
-- Filling and Pasting Data into Cells
-- Filling Cells in Excel Using AutoFill
+- Pasting Data into Cells
 - Find and Replace
 
 ## Changing the Text Case in Excel
@@ -21,7 +20,7 @@ You may get text in your spreadsheet in any format. To change the text case in E
 
 As you can observe in the above table, all the statements begin with a capital letter (exception being Keywords like Windows, Android, etc.) and the rest of the words are in small case. Let us learn to perform changes to the text.
 
-We start with the `**PROPER**` function which converts first letter of all the words into the upper case as shown:
+We start with the **`PROPER`** function which converts first letter of all the words into the upper case as shown:
 
 `=PROPER(select_cells)`
 
@@ -34,7 +33,7 @@ We start with the `**PROPER**` function which converts first letter of all the w
 | Microsoft Excel Has The Basic Features Of All Spreadsheets.                                                                   |
 | Excel Forms Part Of The Microsoft Office Suite Of Software.                                                                   |
 
-Next, we have two other functions `**LOWER**` and `**UPPER**` respectively. The implementation along with their results has been shown below: 
+Next, we have two other functions **`LOWER`** and **`UPPER`** respectively. The implementation along with their results has been shown below: 
 
 `=LOWER(select_cells)`
 
@@ -124,15 +123,34 @@ And you need to arrive at the given result in a new column:
 
 What will you do to achieve this task? 
 
-You may think of manually copying the values from a cell and pasting it into the final one, not to mention the need of proper spacing and a comma right after the last name. To make this process easy, Excel has a function `**CONCATENATE**`. You can use this function and complete this task in less than a minute. The syntax goes like this:
+You may think of manually copying the values from a cell and pasting it into the final one, not to mention the need of proper spacing and a comma right after the last name. To make this process easy, Excel has a function **`CONCATENATE`**. You can use this function and complete this task in less than a minute. The syntax goes like this:
 
 `=CONCATENATE(A2, " ", B2, ", ", C2)`
 
 A proper spacing, a comma and the cell names. This results in the final column as expected.
 
+## Pasting Data into Cells
+In Excel, while you copy data from one cell and try to paste it into a different cell, a lot of manipulations can be performed. For instance, in the previous section you have learned how to implement the **`CONCATENATE`** function, so assume you have written the function in cell E1 and now you want to copy the result of the function into a different cell.
 
+If you use keyboard shortcut Ctrl+V to paste, it will paste the formula not the result itself. However, to achieve more in the paste function, you can right click on the cell and the paste section will have a lot more options to explore. You can paste the formula itself, the result as-it-is, or transpose the result, take care of the formatting, etc. Try to explore these options as shown in the below image:
 
+![Imgur](https://i.imgur.com/4RwIJCl.png)
 
+## Find and Replace
+Let us once again consider the Abalone data set with 10 records. To perform search and replace task in Excel, you need to use the keyboard shortcut key Ctrl+F or you may select the entire range of options available under the icon named **Find and Select** present at the extreme right hand side of the menu bar.
+
+Let us open the **Find and Replace** dialog box using the Ctrl+F keys and search for a number **0.1415**. This number is present under the **Viscera** column. Clicking on the **Find** button again and again will take you through all the cell which consists of this number. To replace a value once you have find it, you can go to the **Replace** tab under the same dialog box, enter the value to be found and in the next placeholder what it needs to be replaced with. 
+
+There's also an option for conditional formatting where you can find cells based on certain conditions and highlight the ones which are detected. 
+
+## Conclusion
+In this guide, you have learned how you can manipulate data in Excel at the very beginner level. To learn more on the same topic refer the Pluralsight [Searching and Manipulating Data in Excel](https://app.pluralsight.com/library/courses/searching-manipulating-data-excel/table-of-contents) course.
+
+## More on Excel
+- [Visualizing Data with PivotChart: Part 1](guides/visualizing-data-with-pivotchart)
+- [Visualizing Data with PivotChart: Part 2](guides/visualizing-data-with-pivotchart:-part-2)
+- [Calculating Cell Values with Formulas](guides/calculating-cell-values-formulas)
+- [Formatting Excel Worksheets and Cells](guides/formatting-excel-worksheets-cells)
 
 
 
